@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Commissioner:wght@100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=League+Spartan:wght@100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Overpass:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+:root {
+  /* Colors */
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+
+  /* Font */
+  --fsH: 2.75rem;
+  --fsP: 0.938rem;
+  --fw700: 700;
+  --fw500: 500;
+  --fw400: 400;
+  --ff: "League Spartan", sans-serif;
+}
+
+* > *,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: var(--fsP);
+  font-weight: var(--fw400);
+  font-family: var(--ff);
+  color: var(--Dark-Grayish-Magenta);
+  line-height: 1.2rem;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--White);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app_wrapper {
+  --moderateWidth: 400px;
+  width: 1200px;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+}
+
+.header_general * {
+  max-width: var(--moderateWidth);
+}
+
+.header_title {
+  font-size: var(--fsH);
+  font-weight: var(--fw700);
+  color: var(--Very-Dark-Magenta);
+  margin-bottom: 25px;
+  line-height: var(--fsH);
+}
+
+.header_rating {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 20px;
+}
+
+.rating {
+  --distance: 20px;
+  width: 400px;
+  max-width: 100% !important;
+  padding: 15px;
+  padding-block: 15px 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: var(--Light-Grayish-Magenta);
+  border-radius: 6px;
+}
+.rating:nth-of-type(1) {
+  transform: translateX(calc(var(--distance) * -1));
+}
+.rating:nth-of-type(3) {
+  transform: translateX(var(--distance));
+}
+
+.rating_p {
+  font-size: var(--fsP);
+  font-weight: var(--fw700);
+  color: var(--Very-Dark-Magenta);
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.testimonial {
+  --distance: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: var(--Very-Dark-Magenta);
+  border-radius: 10px;
+}
+.testimonial:first-of-type {
+  transform: translateY(calc(var(--distance) * -1));
+}
+.testimonial:last-of-type {
+  transform: translateY(var(--distance));
+}
+
+.testimonial_info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.testimonial_img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.testimonial_info_details {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5px;
+}
+.testimonial_info_details > * {
+  font-weight: var(--fw700);
+}
+
+.name {
+  color: var(--White);
+}
+
+.buyer {
+  color: var(--Soft-Pink);
+}
+
+.testimonial_desc {
+  font-weight: var(--fw500);
+  color: var(--White);
+}
+
+@media (max-width: 970px) {
+  .app_wrapper {
+    gap: 60px;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+  }
+  .header_general {
+    text-align: center;
+  }
+  .rating {
+    max-width: 100% !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-inline: 8px;
+    transform: translateX(0) !important;
+    text-align: center;
+  }
+  .testimonials {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    place-items: center;
+    gap: 10px;
+  }
+  .testimonials > * {
+    transform: translateY(0) !important;
+  }
+  .testimonial {
+    max-width: var(--moderateWidth);
+  }
+}
+@media (max-width: 440px) {
+  .rating {
+    width: 100% !important;
+    padding-inline: 20px;
+  }
+}
